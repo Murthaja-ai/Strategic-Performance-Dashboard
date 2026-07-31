@@ -4,7 +4,7 @@
 [![Data Modeling](https://img.shields.io/badge/Data_Modeling-4479A1?style=for-the-badge)](#-data-engineering--modeling)
 [![KPI Engineering](https://img.shields.io/badge/KPI_Engineering-F7931E?style=for-the-badge)](#dashboard-1--executive-performance-overview)
 [![Dataset](https://img.shields.io/badge/Dataset-260K%2B_Records-0A66C2?style=for-the-badge)](#-dataset)
-[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)](LICENSE)
 
 An interactive, two-page Business Intelligence solution built in **Tableau**. Rather than presenting descriptive sports statistics, this project treats 16 seasons of historical match data as an operational dataset — engineering KPIs, a team-centric data model, and conditional win-probability analysis to test common strategic assumptions against evidence.
 
@@ -16,10 +16,11 @@ An interactive, two-page Business Intelligence solution built in **Tableau**. Ra
 - [Live Dashboard Preview](#live-dashboard-preview)
 - [Business Problem](#business-problem)
 - [Dataset](#-dataset)
+- [Analytics Workflow](#-analytics-workflow)
 - [Data Engineering & Modeling](#-data-engineering--modeling)
 - [Dashboard 1 — Executive Performance Overview](#dashboard-1--executive-performance-overview)
 - [Dashboard 2 — Match & Strategy: Impact on Winning](#dashboard-2--match--strategy-impact-on-winning)
-- [Key Insights](#key-insights)
+- [Business Insights](#business-insights)
 - [Technologies & Methods](#technologies--methods)
 - [Repository Structure](#-repository-structure)
 - [License](#-license)
@@ -29,8 +30,12 @@ An interactive, two-page Business Intelligence solution built in **Tableau**. Ra
 
 ## Live Dashboard Preview
 
+Explore the two interactive Tableau dashboards below, designed for executive monitoring and strategic decision analysis.
+
 ### 1. Executive Performance Overview
 ![Overview](assets/overview.png)
+
+---
 
 ### 2. Match & Strategy — Impact on Winning
 ![Strategy](assets/strategy.png)
@@ -45,7 +50,7 @@ Strategic decisions are often driven by assumption rather than evidence — in s
 * Teams perform better at home.
 * High output (runs) translates directly into winning.
 
-This project subjects each assumption to evidence-based testing using 16 years of historical data, rather than accepting conventional wisdom.
+This project evaluates each assumption using evidence derived from 16 years of historical data, rather than conventional wisdom.
 
 ---
 
@@ -57,6 +62,24 @@ This project subjects each assumption to evidence-based testing using 16 years o
 * **Format:** Two relational CSVs (match-level dimension table + delivery-level fact table), joined on Match ID
 
 Full source and schema notes: [`data/Dataset.md`](data/Dataset.md)
+
+---
+
+## 🔄 Analytics Workflow
+
+```
+Historical Match Data
+        ↓
+Data Cleaning & Standardization
+        ↓
+Relational Data Modeling (Team-Centric)
+        ↓
+KPI Engineering
+        ↓
+Interactive Tableau Dashboards
+        ↓
+Strategic Performance Analysis
+```
 
 ---
 
@@ -88,11 +111,11 @@ Full ETL and modeling detail: [`documentation/IPL_Strategic_Performance_Report.p
 
 ---
 
-## Key Insights
+## Business Insights
 
 **Output does not equal efficiency.** Comparing total-runs and win-percentage charts side by side shows some franchises generate high run volumes without converting that into proportionally higher win rates — production volume and operational efficiency are distinct metrics that don't automatically track together.
 
-**Execution outweighs the toss.** Across the full dataset: 50.6% win rate when winning the toss vs. 49.4% when losing it — functionally a coin flip. Whatever advantage exists is negligible next to actual execution.
+**Execution outweighs initial advantage.** Across the full dataset: 50.6% win rate when winning the toss vs. 49.4% when losing it — functionally a coin flip. A factor entirely outside a team's control has negligible bearing on the outcome once execution is accounted for.
 
 **Home advantage is real and measurable.** 55.7% (home) vs. 47.0% (away) — a consistent 8.7-point advantage when neutral venues are excluded from the comparison.
 
@@ -103,13 +126,21 @@ Full ETL and modeling detail: [`documentation/IPL_Strategic_Performance_Report.p
 ## Technologies & Methods
 
 **Business Intelligence**
-Tableau Desktop · Tableau Public · Interactive Dashboard Design
+* Tableau Desktop
+* Tableau Public
+* Interactive Dashboard Design
 
 **Data Engineering**
-Data Cleaning · Entity Resolution · Relational Data Modeling · Team-Centric Restructuring
+* Data Cleaning
+* Entity Resolution
+* Relational Data Modeling
+* Team-Centric Data Restructuring
 
 **Analytics**
-KPI Engineering · Trend Analysis · Comparative Analysis · Conditional Probability Analysis
+* KPI Engineering
+* Trend Analysis
+* Comparative Analysis
+* Conditional Probability Analysis
 
 ---
 
